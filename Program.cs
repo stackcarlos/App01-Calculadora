@@ -1,17 +1,22 @@
 ﻿using System;
-namespace teste1
-{
-    class Program
-    {
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-    
-       static void Main(string[] args)
+namespace App01
+{
+    static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            Console.WriteLine("Qual é seu nome");
-            string nome = Console.ReadLine();
-            Console.WriteLine("Olá " + nome + "!");
-          
-       
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
